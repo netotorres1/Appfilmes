@@ -1,0 +1,84 @@
+.lista-filmes-em-cartaz{
+    margin: auto;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+}
+.titulo-pagina{
+    color: white;
+    margin: 20px;
+    font-size: 40px;
+    margin-left: 160px;
+}
+.lista-filmes-em-cartaz-filme-titulo{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.lista-filmes-em-cartaz-filme{
+    height: 400px;
+    width: 250px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 30px;
+    position: static;
+}
+.lista-filmes-em-cartaz-filme:hover{
+    position: relative;
+    bottom: 6px;
+    right: 3px;
+    transition: 0.3s;
+}
+.lista-filmes-em-cartaz-filme:hover{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+.lista-filmes-em-cartaz-filme-img{
+    height: 280px;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+}
+.lista-filmes-em-cartaz-filme-btn{
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    width: 80%;
+}
+.lista-filmes-em-cartaz-filme-btn:hover{
+    background-color: yellow;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.lista-filmes-em-cartaz-filme-btn{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.lista-filmes-em-cartaz-filme-average{
+    padding: 10px;
+    background-color: #b8860b;
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+}
+.loading{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    margin-top: 300px;
+    height: 100%;
+    text-shadow: 2px 2px 3px black
+}
+body{
+    background-color: rgb(126, 125, 125);
+}

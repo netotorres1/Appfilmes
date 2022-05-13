@@ -1,0 +1,47 @@
+.container-filme{
+    margin: 50px;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius:20px;
+}
+.container-filme-titulo{
+    margin: 20px;
+}
+.container-filme-imagem{
+    width: 1000px;
+    height: 400px;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 20px;
+}
+.container-filme-sinopse{
+    font-weight: 500;
+    margin: 20px;
+    text-align: center;
+}
+.container-filme-row{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+.container-filme-data-lancamento{
+    font-weight: bold;
+    color: grey;
+    padding: 10px;
+}
+.container-filme-lancamento{
+    font-weight: bold;
+    color:white;
+    padding: 10px;
+    background-color: green;
+    border-radius: 10px;
+}
+.container-filme-linguagem{
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+}

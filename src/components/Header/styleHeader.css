@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.header-btn-home:hover{
+    font-size: large;
+}
+.header-btn-home{
+    color: white;
+}
+.header-btn-list{
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+.header-btn-list:hover{
+    padding: 15px;
+    border-radius: 7px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+*{
+    text-decoration: none;
+}
