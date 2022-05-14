@@ -2,13 +2,13 @@ import {useEffect, useState } from 'react';
 import res from '../../services/res';
 import { Link} from 'react-router-dom';
 
-function ProximosLancamentos(){
+function Populares(){
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function loadFilmes(){
-            const response = await res.get("/movie/upcoming", {
+            const response = await res.get("/movie/popular", {
                 params:{
                     api_key: "0cac2d596b64554674c2786c5ac18d09",
                     language: "pt-BR",
@@ -31,7 +31,7 @@ function ProximosLancamentos(){
 
     return(
         <div className='container-home'>
-            <h1 className='titulo-pagina'>Proximos lançamentos</h1>
+            <h1 className='titulo-pagina'>Populares</h1>
             <div className='lista-filmes-em-cartaz'>
             {filmes.map((filme) => {
                     return(
@@ -48,4 +48,4 @@ function ProximosLancamentos(){
     )
 }
 
-export default ProximosLancamentos;
+export default Populares;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
 .lista-filmes-em-cartaz{
     margin: auto;
     max-width: 80%;
@@ -10,6 +12,8 @@
     margin: 20px;
     font-size: 40px;
     margin-left: 160px;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 .lista-filmes-em-cartaz-filme-titulo{
     margin-top: 10px;
@@ -29,6 +33,7 @@
     text-align: center;
     margin-bottom: 30px;
     position: static;
+    font-family: 'Rubik', sans-serif;
 }
 .lista-filmes-em-cartaz-filme:hover{
     position: relative;

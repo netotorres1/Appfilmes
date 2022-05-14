@@ -2,6 +2,7 @@ import {useEffect, useState } from 'react';
 import res from '../../services/res';
 import { Link} from 'react-router-dom';
 import './home.css';
+import './media.css';
 
 function Home(){
 

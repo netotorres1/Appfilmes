@@ -31,6 +31,7 @@ function MelhoresAvaliados(){
 
     return(
         <div className='container-home'>
+             <h1 className='titulo-pagina'>Melhores Avaliados</h1>
             <div className='lista-filmes-em-cartaz'>
             {filmes.map((filme) => {
                     return(

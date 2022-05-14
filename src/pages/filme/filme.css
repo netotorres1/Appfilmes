@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
 .container-filme{
     margin: 50px;
     width: 75%;
@@ -7,12 +9,13 @@
     justify-content: center;
     background-color: white;
     border-radius:20px;
+    font-family: 'Rubik', sans-serif;
 }
 .container-filme-titulo{
     margin: 20px;
 }
 .container-filme-imagem{
-    width: 1000px;
+    width: 90%;
     height: 400px;
     object-fit: cover;
     margin: auto;
