@@ -22,6 +22,7 @@ function Header(){
                         <Link className='header-btn-list' to={'/melhores-avaliados'}>Melhores Avaliados</Link>
                         <Link className='header-btn-list' to={'/proximos-lancamentos'}>Proximo Lançamentos</Link>
                         <Link className='header-btn-list' to={'/populares'}>Populares</Link>
+                        <Link className='header-btn-list' to={'/favoritos'}>Favoritos</Link>
                     </nav>
                 </div>
             </div>

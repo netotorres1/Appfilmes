@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
 
-.container-filme{
+.container-filme-pag{
     margin: 50px;
     width: 75%;
     margin: auto;
@@ -47,4 +47,31 @@
     font-weight: bold;
     color: black;
     padding: 10px;
+}
+.area-buttons-btn{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    border: none;
+}
+.area-buttons-btn:hover{
+    background-color: yellow;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Rubik', sans-serif;
+}
+@media screen and (max-width: 800px){
+    .container-filme-row{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .area-buttons{
+        margin: 10px;
+        width: 90%;
+        text-align: center;
+    }
+
 }

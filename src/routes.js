@@ -6,6 +6,7 @@ import Header from './components/Header';
 import ProximosLancamentos from './pages/ProximosLancamentos';
 import MelhoresAvaliados from './pages/Melhores_avaliados';
 import Populares from './pages/populares';
+import Favoritos from './pages/favoritos';
 
 
 function RoutesApp(){
@@ -18,6 +19,7 @@ function RoutesApp(){
                 <Route path='/melhores-avaliados' element={<MelhoresAvaliados/>}/>
                 <Route path='/proximos-lancamentos' element={<ProximosLancamentos/>}/>
                 <Route path='/populares' element={<Populares/>}/>
+                <Route path='/favoritos' element={<Favoritos/>}/>
             </Routes>
         </BrowserRouter>
     )

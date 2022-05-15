@@ -1,5 +1,5 @@
 import {useEffect, useState } from 'react';
-import {useParams } from 'react-router-dom';
+import {useParams, useNavigate } from 'react-router-dom';
 import './filme.css';
 
 import res from '../../services/res';
@@ -7,6 +7,7 @@ import res from '../../services/res';
 function Filme(){
 
     const {id} = useParams();
+    const navigate = useNavigate();
     const [filme, setFilme] = useState([]);
 
     useEffect(() => {
@@ -23,21 +24,45 @@ function Filme(){
                 console.log(response.data);
             })
             .catch(() => {
-                console.log("Filme nao encontrado")
+                console.log("Filme nao encontrado");
+                navigate("/", { replace: true});
+                return;
             })
         }
         loadFilme();
-    },[])
+    },[navigate,id])
+
+    function salvarFilme(){
+        const minhaLista = localStorage.getItem("appfilmes");
+
+        let filmesSalvos = JSON.parse(minhaLista) || [];
+
+        const hashFilme = filmesSalvos.some((filmeSalvo) => filmeSalvo.id == filme.id)
+
+        if(hashFilme){
+            alert("Esse filme ja esta na lista");
+            return;
+        }
+
+        filmesSalvos.push(filme);
+        localStorage.setItem("appfilmes", JSON.stringify(filmesSalvos));
+        alert("Filme salvo com sucesso.");
+    }
 
     return(
-        <div className='container-filme'>
+        <div className='container-filme-pag'>
            <h1 className='container-filme-titulo'>{filme.title}</h1> 
            <img className='container-filme-imagem' src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}/>
            <p className='container-filme-sinopse'>{filme.overview}</p>
+
            <div className='container-filme-row'>
-            <span className='container-filme-data-lancamento'>Data de lançamento: {filme.release_date}</span>
-            <span className='container-filme-lancamento'>{filme.status}</span>
-            <p className='container-filme-linguagem'>Linguagem original: {filme.original_language}</p>
+                <span className='container-filme-data-lancamento'>Data de lançamento: {filme.release_date}</span>
+                <span className='container-filme-lancamento'>{filme.status}</span>
+                <p className='container-filme-linguagem'>Linguagem original: {filme.original_language}</p>
+                <div className='area-buttons'>
+                    <button className='area-buttons-btn' onClick={salvarFilme}>Salvar</button>
+                    <a target='_blank' className='area-buttons-btn' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>Trailer</a>
+                </div>
            </div>
         </div>
     )
