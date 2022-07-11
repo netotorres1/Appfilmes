@@ -37,7 +37,7 @@ function Filme(){
 
         let filmesSalvos = JSON.parse(minhaLista) || [];
 
-        const hashFilme = filmesSalvos.some((filmeSalvo) => filmeSalvo.id == filme.id)
+        const hashFilme = filmesSalvos.some((filmeSalvo) => filmeSalvo.id === filme.id)
 
         if(hashFilme){
             alert("Esse filme ja esta na lista");
@@ -61,7 +61,7 @@ function Filme(){
                 <p className='container-filme-linguagem'>Linguagem original: {filme.original_language}</p>
                 <div className='area-buttons'>
                     <button className='area-buttons-btn' onClick={salvarFilme}>Salvar</button>
-                    <a target='_blank' className='area-buttons-btn' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>Trailer</a>
+                    <a rel="noreferrer" target='_blank' className='area-buttons-btn' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>Trailer</a>
                 </div>
            </div>
         </div>
