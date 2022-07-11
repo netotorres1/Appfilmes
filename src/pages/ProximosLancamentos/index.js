@@ -37,7 +37,7 @@ function ProximosLancamentos(){
                     return(
                         <article className='lista-filmes-em-cartaz-filme'>
                             <h2 className='lista-filmes-em-cartaz-filme-titulo' >{filme.title}</h2>
-                            <img className='lista-filmes-em-cartaz-filme-img' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}/>
+                            <img className='lista-filmes-em-cartaz-filme-img' alt='' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}/>
                             <span className='lista-filmes-em-cartaz-filme-average'>{filme.vote_average}</span>
                             <Link className='lista-filmes-em-cartaz-filme-btn' to={`/filme/${filme.id}`}>Acessar</Link>
                         </article>

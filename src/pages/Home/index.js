@@ -40,7 +40,7 @@ function Home(){
                     return(
                         <article key={filme.id} className='lista-filmes-em-cartaz-filme'>
                             <h2 className='lista-filmes-em-cartaz-filme-titulo'>{filme.title}</h2>
-                            <img className='lista-filmes-em-cartaz-filme-img' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
+                            <img className='lista-filmes-em-cartaz-filme-img' alt='' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
                             <span className='lista-filmes-em-cartaz-filme-average'>{filme.vote_average}</span>
                             <Link to={`/filme/${filme.id}`} className='lista-filmes-em-cartaz-filme-btn' >Acessar</Link>
                         </article>
